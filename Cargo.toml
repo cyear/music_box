@@ -1,0 +1,22 @@
+[package]
+name = "music-ui"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0.75"
+bytes = "1.6.0"
+crossterm = "0.27.0"
+error-chain = "0.12.4"
+ratatui = "0.24.0"
+reqwest = { version = "0.12.4" }
+rodio = { version = "0.18.0", default-features = false, features = ["symphonia-all"] }
+# rsmpeg = { version = "0.15.0", default-features = false, features = ["ffmpeg6"] }
+# rusty_ffmpeg = { version = "0.14.1",default-features = false, features = ["ffmpeg6"] }
+tempfile = "3.10.1"
+tokio = { version = "1.37.0", features = ["full"] }
+
+[package.metadata.vcpkg]
+dependencies = ["ffmpeg[ffmpeg,x264,avcodec,avdevice,avfilter,avformat]:x64-windows-static-md"]
+git = "https://mirror.ghproxy.com/https://github.com/microsoft/vcpkg"
+rev = "943c5ef"
