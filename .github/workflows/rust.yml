@@ -27,8 +27,8 @@ jobs:
     - name: Build
       run: cargo build --release --verbose
 
-    - name: Upload Build Artifacts
+    - name: Upload Executable
       uses: actions/upload-artifact@v3
       with:
-        name: compiled-files
+        name: music-ui.exe
         path: target/release/music-ui.exe
