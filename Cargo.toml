@@ -8,14 +8,18 @@ anyhow = "1.0.75"
 bytes = "1.6.0"
 crossterm = "0.27.0"
 error-chain = "0.12.4"
-ratatui = "0.24.0"
+ratatui = "0.26.2"
 reqwest = { version = "0.12.4" }
 rodio = { version = "0.18.0", default-features = false, features = ["symphonia-all"] }
 # rsmpeg = { version = "0.15.0", default-features = false, features = ["ffmpeg6"] }
 # rusty_ffmpeg = { version = "0.14.1",default-features = false, features = ["ffmpeg6"] }
 tempfile = "3.10.1"
 tokio = { version = "1.37.0", features = ["full"] }
-
+lazy_static = "1.4.0"
+serde_json = "1.0.117"
+# netease-cloud-music-api = { version = "1.4.0", git = "https://github.com/gmg137/netease-cloud-music-api", branch = "master" }
+netease-cloud-music-api = { path = "src/netease-cloud-music-api" }
+notify-rust = "4.11.1"
 [package.metadata.vcpkg]
 dependencies = ["ffmpeg[ffmpeg,x264,avcodec,avdevice,avfilter,avformat]:x64-windows-static-md"]
 git = "https://mirror.ghproxy.com/https://github.com/microsoft/vcpkg"
